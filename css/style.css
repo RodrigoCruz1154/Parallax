@@ -1,0 +1,114 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/*Texto en línea*/
+nav{
+    background-color: #2d3436;
+    margin-bottom: 2%;
+    height: auto;
+}
+
+.LogoContainer{
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul{
+    display: inline;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    display: inline;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+nav ul ul{
+    display: block;
+    position: absolute;
+    top: 60px;
+    transform: translateY(60%);
+    opacity: 0;
+}
+nav ul li:hover ul{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+/*Parallax*/
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    color: #fff;
+    margin:0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: "Roboto";
+}
+
+main{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vh 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+main h1{
+    margin-top: -100px;
+}
+
+main, main:before{
+    background: 50% 50% / cover;
+}
+
+main::before{
+    bottom:0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url("../img/wallhaven-682481.jpg");
+    background-color: blue;
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+main *{
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+}
